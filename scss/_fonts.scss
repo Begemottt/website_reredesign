@@ -1,0 +1,95 @@
+// * [ [ _fonts.scss ] ]
+// This is the file with all the text styles and font definitions
+
+// * [ Font Mixin Definitions ]
+@mixin font_header{
+    font-family: 'Xanh Mono', monospace;
+}
+@mixin font_body{
+    font-family: 'Alegreya', serif;
+}
+@mixin font_mono{
+    font-family: 'Fira Code', monospace;
+}
+
+// * [ General Text Styles ]
+p, li, button, a{
+    @include font_body;
+}
+h1, h2, h3, h4, h5, h6, span{
+    @include font_header;
+}
+pre, code, button, span.mono{
+    @include font_mono;
+}
+
+// * [ Specific Text Styles ]
+// Headers
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.75em;
+}
+// Main text
+p{
+    margin: 0 1em 1em 0;    
+}
+
+// Highlight styles
+::selection{
+    color: $main2;
+    background-color: $background2;
+}
+a::selection{
+    background-color: $white;
+}
+
+// Specific colors for Themes
+main.dark{
+    color: $white;
+    h1{
+        text-shadow: 4px 4px 0px $main2;
+    }
+    h2{
+        text-shadow: 2px 2px 0px $main2;
+    }
+    h3{
+        text-shadow: 4px 4px 0px $main1;
+    }
+
+    // Link style
+    p a{
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 2px solid $main2;
+        &:hover, &:focus, &:focus-within{
+            color: $main2;
+        }
+    }
+}
+main.light{
+    color: $black;
+    h1{
+        text-shadow: 4px 4px 0px $main4;
+    }
+    h2{
+        text-shadow: 2px 2px 0px $main4;
+    }
+    h3{
+        text-shadow: 4px 4px 0px $main3;
+    }
+
+    // Link style
+    p a{
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 2px solid $main4;
+        &:hover, &:focus, &:focus-within{
+            color: $main4;
+        }
+    }
+}

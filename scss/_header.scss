@@ -1,0 +1,134 @@
+// * [ [ [ _header.scss ] ] ]
+// This is the file for all the UI and menus, which are placed on the page in the "header" section
+
+// * [ [ Location ] ]
+// Placing them in the right spot, and with the right size!
+header{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    // * [ Logo ]
+    div#logo{
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border: 1px solid $black;
+        img{
+            width: 100%;
+            display: inline-block;
+        }
+    }
+
+    // * [ Top border ]
+    div#border_top{
+        position: fixed;
+        z-index: 25;
+        top: 0;
+        right: 0;
+
+        width: 95vw;
+        height: 25px;
+        overflow: hidden;
+
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        
+        div{
+            width: 1560px;
+            white-space: nowrap;
+
+            span{
+                width: 100%;
+                display: inline-block;
+                
+                animation: marquee 20s linear infinite;
+            }
+        }
+    }
+    div#splash{
+        position: absolute;
+        z-index: 10;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        padding: 25px;
+
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+    }
+}
+
+// * [ [ Color Themes ] ]
+div#theme_wrapper.dark header{
+    div#logo{
+        border: 2px solid $main1;
+        .st1{
+            fill: $main2;
+        }
+        .st0{
+            fill: $background1;
+        }
+    }
+    div#border_top{
+        border-bottom: 2px solid $main1;
+        border-right: 2px solid $main1;
+        background-color: $background2;
+        color: $main2;
+    }
+    div#splash{
+        border: 2px solid $main1;
+        border-top: none;
+    }
+}
+div#theme_wrapper.light header{
+    div#logo{
+        border: 2px solid $main3;
+        .st1{
+            fill: $main4;
+        }
+        .st0{
+            fill: $background3;
+        }
+    }
+    div#border_top{
+        border-bottom: 2px solid $main3;
+        border-right: 2px solid $main3;
+        background-color: $background4;
+        color: $main4;
+    }
+    div#splash{
+        border: 2px solid $main3;
+        border-top: none;
+    }
+}
+
+// * [ Marquee Animation ]
+@keyframes marquee{
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

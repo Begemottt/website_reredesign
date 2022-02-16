@@ -1,0 +1,46 @@
+// * [ [ [ _buttons.scss ] ] ]
+// These are the styles for all the various buttons on the site
+
+//* [ [ Test Buttons ] ]
+div.test_buttons{
+    // Position
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    // Flex
+    display: flex;
+    flex-direction: row;
+
+    button{
+        // Size
+        width: 200px;
+        height: 50px;
+        // Appearance
+        outline: none;
+        border: 2px solid $main2;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        // Animation
+        transition: top 200ms, left 200ms, background-color 200ms;
+        // Individual buttons
+        &#test1{
+            background-color: $main1;
+        }
+        &#test2{
+            background-color: $background2;
+        }
+        &#test3{
+            background-color: $background1;
+            color: $main2;
+        }
+        // Active style
+        &:active{
+            background-color: $main2;
+            top: 4px;
+            left: 4px;
+            transition: top 200ms, left 200ms, background-color 200ms;
+        }
+    }
+}
+

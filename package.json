@@ -1,0 +1,32 @@
+{
+  "name": "rtvgilder",
+  "version": "0.0.2",
+  "description": "A new website for Robin VanGilder",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack",
+    "start": "serve ./dist",
+    "watch": "webpack --watch"
+  },
+  "keywords": [
+    "website",
+    "scss",
+    "anime"
+  ],
+  "author": "Robin VanGilder",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
+    "sass-loader": "^12.3.0",
+    "serve": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
+}

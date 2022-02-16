@@ -1,0 +1,35 @@
+//* [ [ [ styles.scss ] ] ]
+//* This is the master stylesheet into which all other sheets are imported, which is them transpiled into styles.scss!
+
+// * [ [ Functional Imports ] ]
+// The basics that have to come before everything. Reset and mixin definitions.
+@import 'reset';
+@import 'size';
+
+// * [ [ Basic Components ] ]
+// Fonts, colors, things of that nature
+@import 'colors';
+@import 'fonts';
+@import 'buttons';
+
+// * [ [ Layout ] ]
+@import 'layout';
+@import 'header';
+
+// Background on the theme wrapper!
+div#theme_wrapper{
+    &.dark{
+        background-color: $background1;
+        transition: background-color 200ms;
+    }
+    &.light{
+        background-color: $background3;
+        transition: background-color 200ms;
+    }
+}
+
+// * [ [ Default Styles ] ]
+// Fallbacks in case nothing else applies
+.animating{
+    will-change: all;
+}
