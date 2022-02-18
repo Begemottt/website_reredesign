@@ -29,24 +29,43 @@ header{
         position: fixed;
         z-index: 25;
         top: 0;
-        right: 0;
+        left: 200px;
 
         width: 95vw;
         height: 25px;
         overflow: hidden;
 
         display: flex;
-        justify-items: center;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         align-content: center;
-        
+
+        background-image: url("../images/svg/top_border.svg");
+        background-repeat: repeat-x;
+        background-position: center;
+
+        background-color: $black;
+        border-bottom: 1px solid $black;
+
         div{
-            width: 1560px;
+            width: 600px;
+            height: 100%;
             white-space: nowrap;
+            overflow: hidden;
+            background-color: $black;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+
+            img{
+                width: auto;
+                height: 100%;
+            }
 
             span{
-                width: 100%;
+                width: 577px;
                 display: inline-block;
                 
                 animation: marquee 20s linear infinite;
@@ -77,23 +96,25 @@ header{
             object-fit: cover;
         }
     }
+
+    div#border_right{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        z-index: 20;
+        
+        background-color: $background2;
+    }
 }
 
 // * [ [ Color Themes ] ]
 div#theme_wrapper.dark header{
     div#logo{
         border: 2px solid $main1;
-        .st1{
-            fill: $main2;
-        }
-        .st0{
-            fill: $background1;
-        }
     }
     div#border_top{
-        border-bottom: 2px solid $main1;
-        border-right: 2px solid $main1;
-        background-color: $background2;
         color: $main2;
     }
     div#splash{
@@ -104,17 +125,8 @@ div#theme_wrapper.dark header{
 div#theme_wrapper.light header{
     div#logo{
         border: 2px solid $main3;
-        .st1{
-            fill: $main4;
-        }
-        .st0{
-            fill: $background3;
-        }
     }
     div#border_top{
-        border-bottom: 2px solid $main3;
-        border-right: 2px solid $main3;
-        background-color: $background4;
         color: $main4;
     }
     div#splash{
@@ -129,6 +141,6 @@ div#theme_wrapper.light header{
         transform: translateX(100%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-250%);
     }
 }
