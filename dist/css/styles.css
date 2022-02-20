@@ -80,6 +80,129 @@ select {
     scroll-behavior: auto !important;
   }
 }
+div#theme_wrapper.light {
+  display: block;
+  width: 100%;
+  background-color: #FEFFDF;
+  transition: background-color 200ms;
+  background-image: url("../images/dither_sparse_light.png");
+  background-repeat: repeat;
+}
+div#theme_wrapper.light div#logo {
+  background-color: #FFE79A;
+  border: 4px solid #EF5A5A;
+}
+div#theme_wrapper.light div#border_top div.marquee {
+  transition: background-color 200ms;
+  background-color: #FFE79A;
+}
+div#theme_wrapper.light div#border_top div.marquee div.limiter, div#theme_wrapper.light div#border_top div.marquee img {
+  transition: background-color 200ms;
+  background-color: #ffffff;
+  color: #263859;
+  background-image: none;
+}
+div#theme_wrapper.light div.functions button#theme .st0 {
+  transition: fill 400ms, stroke 400ms;
+  fill: #FEFFDF;
+  stroke: #EF5A5A;
+}
+div#theme_wrapper.light p a {
+  transition: color 200ms, border-bottom 200ms;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid #EF5A5A;
+}
+div#theme_wrapper.light p a:hover, div#theme_wrapper.light p a:focus, div#theme_wrapper.light p a:focus-within {
+  color: #EF5A5A;
+  border-bottom: 2px dotted #EF5A5A;
+}
+div#theme_wrapper.light main article.main {
+  transition: color 200ms;
+  color: #000000;
+}
+div#theme_wrapper.light main article.main section.header {
+  transition: background-color 200ms, border 200ms;
+  background-color: #FFE79A;
+  border: 4px solid #FEFFDF;
+  background-image: url("../images/dither_medium_white.png");
+  background-repeat: repeat;
+}
+div#theme_wrapper.light main article.main section.body {
+  transition: background-color 200ms, border 200ms;
+  background-color: #FEFFDF;
+  border: 4px solid #ffffff;
+}
+div#theme_wrapper.light main h1 {
+  transition: color 200ms, text-shadow 200ms;
+  text-shadow: 4px 4px 0px #FFA952;
+}
+div#theme_wrapper.light main h2, div#theme_wrapper.light main h3 {
+  transition: color 200ms, text-shadow 200ms;
+  text-shadow: 2px 2px 0px #FFA952;
+}
+
+div#theme_wrapper.dark {
+  display: block;
+  width: 100%;
+  background-color: #17223B;
+  transition: background-color 200ms;
+  background-image: url("../images/dither_sparse_dark.png");
+  background-repeat: repeat;
+}
+div#theme_wrapper.dark div#logo {
+  background-color: #FFE79A;
+  border: 4px solid #FF6768;
+}
+div#theme_wrapper.dark div#border_top div.marquee {
+  transition: background-color 200ms;
+  background-color: #263859;
+}
+div#theme_wrapper.dark div#border_top div.marquee div.limiter, div#theme_wrapper.dark div#border_top div.marquee img {
+  transition: background-color 200ms;
+  background-color: #000000;
+  color: #FFE79A;
+  background-image: none;
+}
+div#theme_wrapper.dark div.functions button#theme .st0 {
+  transition: fill 400ms, stroke 400ms;
+  fill: #263859;
+  stroke: #FF6768;
+}
+div#theme_wrapper.dark p a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid #FF6768;
+}
+div#theme_wrapper.dark p a:hover, div#theme_wrapper.dark p a:focus, div#theme_wrapper.dark p a:focus-within {
+  color: #FF6768;
+  border-bottom: 2px dotted #FF6768;
+}
+div#theme_wrapper.dark main article.main {
+  transition: color 200ms;
+  color: #ffffff;
+}
+div#theme_wrapper.dark main article.main section.header {
+  transition: background-color 200ms, border 200ms;
+  background-color: #17223B;
+  border: 4px solid #263859;
+  background-image: url("../images/dither_medium_black.png");
+  background-repeat: repeat;
+}
+div#theme_wrapper.dark main article.main section.body {
+  transition: background-color 200ms, border 200ms;
+  background-color: #17223B;
+  border: 4px solid #000000;
+}
+div#theme_wrapper.dark main h1 {
+  transition: color 200ms, text-shadow 200ms;
+  text-shadow: 4px 4px 0px #6B778D;
+}
+div#theme_wrapper.dark main h2, div#theme_wrapper.dark main h3 {
+  transition: color 200ms, text-shadow 200ms;
+  text-shadow: 2px 2px 0px #6B778D;
+}
+
 p, li, button, a {
   font-family: "Alegreya", serif;
 }
@@ -109,54 +232,12 @@ p {
 }
 
 ::selection {
-  color: #FF6768;
-  background-color: #263859;
+  color: #000000;
+  background-color: #FF6768;
 }
 
 a::selection {
   background-color: #ffffff;
-}
-
-main.dark {
-  color: #ffffff;
-}
-main.dark h1 {
-  text-shadow: 4px 4px 0px #FF6768;
-}
-main.dark h2 {
-  text-shadow: 2px 2px 0px #FF6768;
-}
-main.dark h3 {
-  text-shadow: 4px 4px 0px #6B778D;
-}
-main.dark p a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 2px solid #FF6768;
-}
-main.dark p a:hover, main.dark p a:focus, main.dark p a:focus-within {
-  color: #FF6768;
-}
-
-main.light {
-  color: #000000;
-}
-main.light h1 {
-  text-shadow: 4px 4px 0px #EF5A5A;
-}
-main.light h2 {
-  text-shadow: 2px 2px 0px #EF5A5A;
-}
-main.light h3 {
-  text-shadow: 4px 4px 0px #FFA952;
-}
-main.light p a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 2px solid #EF5A5A;
-}
-main.light p a:hover, main.light p a:focus, main.light p a:focus-within {
-  color: #EF5A5A;
 }
 
 div.test_buttons {
@@ -193,6 +274,32 @@ div.test_buttons button:active {
   transition: top 200ms, left 200ms, background-color 200ms;
 }
 
+.hovertext:before {
+  content: attr(data);
+  visibility: hidden;
+  opacity: 0;
+  width: auto;
+  background-color: #263859;
+  border: 2px dotted #FF6768;
+  color: #ffffff;
+  padding: 4px;
+  transition: opacity 200ms;
+  position: absolute;
+  z-index: 101;
+  left: 0;
+  top: 100%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hovertext:active:before, .hovertext.active:before {
+  opacity: 0;
+  visibility: hidden;
+}
+
 main {
   width: 100%;
   min-height: 150vh;
@@ -203,6 +310,8 @@ main {
   align-content: flex-start;
   justify-items: flex-start;
   align-items: center;
+  padding-top: 50vh;
+  z-index: 50;
 }
 main article {
   position: relative;
@@ -219,7 +328,7 @@ main article {
 }
 @media screen and (min-width: 801px) {
   main article {
-    width: 800px;
+    width: 900px;
     margin: 1rem 0 1rem 0;
   }
 }
@@ -234,7 +343,7 @@ main article section.header {
   padding: 2em;
 }
 main article section.body {
-  width: 600px;
+  width: 800px;
   border-top: none;
   padding: 1em;
   margin-left: 1.5em;
@@ -299,7 +408,7 @@ main div#front_page_menu div.front_page_button div.button_middle {
 main div#front_page_menu div.front_page_button div.button_middle .cls-1 {
   fill: none;
   stroke-miterlimit: 10;
-  stroke-width: 2px;
+  stroke-width: 8px;
 }
 main div#front_page_menu div.front_page_button div.button_top {
   z-index: 30;
@@ -308,6 +417,7 @@ main div#front_page_menu div.front_page_button div.button_top {
   left: 0;
   width: 100%;
   height: 100%;
+  clip-path: path("M600 0.5 100 0.5 0.5 50 0.5 100 500 100 600 50 600 0.5z");
 }
 main div#front_page_menu div.front_page_button div.button_top a {
   width: 100%;
@@ -341,54 +451,6 @@ main div#front_page_menu div.front_page_button:active {
   transition: top 50ms;
 }
 
-div#theme_wrapper.dark main article section {
-  color: #ffffff;
-  background-color: #000000;
-  transition: color 200ms, background-color 200ms;
-}
-div#theme_wrapper.dark main article section.header {
-  border: 1px solid #6B778D;
-  background-color: #17223B;
-  box-shadow: 4px 4px 0px #263859 inset;
-  transition: all 200ms;
-}
-div#theme_wrapper.dark main article section.body {
-  border: 1px solid #263859;
-  background-color: #000000;
-  transition: all 200ms;
-}
-div#theme_wrapper.dark main div.button_middle .cls-1 {
-  stroke: #FF6768;
-  transition: stroke 200ms;
-}
-div#theme_wrapper.dark main div.button_top {
-  text-shadow: 2px 2px 0px #FF6768, 0px 0px 2px #000000;
-}
-
-div#theme_wrapper.light main article section {
-  color: #000000;
-  background-color: #ffffff;
-  transition: color 200ms, background-color 200ms;
-}
-div#theme_wrapper.light main article section.header {
-  border: 1px solid #FFA952;
-  background-color: #FEFFDF;
-  box-shadow: 4px 4px 0px #FFE79A inset;
-  transition: all 200ms;
-}
-div#theme_wrapper.light main article section.body {
-  border: 1px solid #FFE79A;
-  background-color: #ffffff;
-  transition: all 200ms;
-}
-div#theme_wrapper.light main div.button_middle .cls-1 {
-  stroke: #EF5A5A;
-  transition: stroke 200ms;
-}
-div#theme_wrapper.light main div.button_top {
-  text-shadow: 2px 2px 0px #EF5A5A, 0px 0px 2px #000000;
-}
-
 header {
   position: absolute;
   width: 100%;
@@ -411,61 +473,112 @@ header div#logo img {
 }
 header div#border_top {
   position: fixed;
-  z-index: 25;
+  z-index: 100;
   top: 0;
   left: 200px;
   width: 95vw;
-  height: 25px;
-  overflow: hidden;
+  height: 125px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   align-content: center;
-  background-image: url("../images/svg/top_border.svg");
+}
+header div#border_top div.marquee {
+  background-image: url("../images/top_border.png");
   background-repeat: repeat-x;
   background-position: center;
-  background-color: #000000;
-  border-bottom: 1px solid #000000;
-}
-header div#border_top div {
-  width: 600px;
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: 25px;
   white-space: nowrap;
   overflow: hidden;
-  background-color: #000000;
+}
+header div#border_top div.marquee img {
+  width: auto;
+  height: 100%;
+}
+header div#border_top div.marquee div.limiter {
+  width: 600px;
+  height: 100%;
+  overflow: hidden;
+  background-image: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-header div#border_top div img {
+header div#border_top div.marquee div.limiter span {
   width: auto;
-  height: 100%;
-}
-header div#border_top div span {
-  width: 577px;
   display: inline-block;
   animation: marquee 20s linear infinite;
 }
-header div#splash {
-  position: absolute;
-  z-index: 10;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 90vh;
-  padding: 25px;
-  overflow: hidden;
+header div#border_top nav {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: auto;
+  height: 50px;
 }
-header div#splash img {
-  width: 100%;
-  height: 100%;
+header div#border_top nav a {
   display: block;
-  object-fit: cover;
+  clip-path: path("M200 25 200 0 0 0 0 50 175 50 200 25Z");
+  width: 200px;
+  height: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url("../images/dither_medium.png");
+  background-position: center;
+  background-repeat: repeat;
+  transition: top 200ms, background-color 200ms;
+  transition: background-color 200ms, color 200ms;
+  background-color: #17223B;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #FF6768, 0px 0px 4px #000000;
+}
+header div#border_top nav a .cls-1 {
+  fill: none;
+  stroke: #FF6768;
+  stroke-width: 4px;
+  stroke-miterlimit: 10;
+  stroke: #FF6768;
+  transition: stroke 200ms;
+}
+header div#border_top nav a span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleY(1.5);
+}
+header div#border_top nav a:hover, header div#border_top nav a:focus, header div#border_top nav a:focus-within {
+  background-color: #FF6768;
+  transition: background-color 200ms;
+}
+header div#border_top div.functions {
+  height: 50px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  z-index: 100;
+}
+header div#border_top div.functions button {
+  height: 50px;
+  width: 50px;
+  background: none;
+  outline: none;
+  border: none;
+}
+header div#border_top div.functions button svg {
+  transform: scale(0.75);
+}
+header div#border_top div.functions button .st0 {
+  fill: #FF6768;
+  stroke: #000000;
+  stroke-width: 2px;
+  stroke-miterlimit: 10;
 }
 header div#border_right {
   position: fixed;
@@ -477,26 +590,25 @@ header div#border_right {
   background-color: #263859;
 }
 
-div#theme_wrapper.dark header div#logo {
-  border: 2px solid #6B778D;
+div#splash {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 95vh;
+  padding: 25px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
 }
-div#theme_wrapper.dark header div#border_top {
-  color: #FF6768;
-}
-div#theme_wrapper.dark header div#splash {
-  border: 2px solid #6B778D;
-  border-top: none;
-}
-
-div#theme_wrapper.light header div#logo {
-  border: 2px solid #FFA952;
-}
-div#theme_wrapper.light header div#border_top {
-  color: #EF5A5A;
-}
-div#theme_wrapper.light header div#splash {
-  border: 2px solid #FFA952;
-  border-top: none;
+div#splash img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 @keyframes marquee {
@@ -504,18 +616,9 @@ div#theme_wrapper.light header div#splash {
     transform: translateX(100%);
   }
   to {
-    transform: translateX(-250%);
+    transform: translateX(-100%);
   }
 }
-div#theme_wrapper.dark {
-  background-color: #17223B;
-  transition: background-color 200ms;
-}
-div#theme_wrapper.light {
-  background-color: #FEFFDF;
-  transition: background-color 200ms;
-}
-
 .animating {
   will-change: all;
 }

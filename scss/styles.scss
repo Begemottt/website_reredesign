@@ -9,24 +9,14 @@
 // * [ [ Basic Components ] ]
 // Fonts, colors, things of that nature
 @import 'colors';
+@import 'themes';
 @import 'fonts';
 @import 'buttons';
+@import 'hovertext';
 
 // * [ [ Layout ] ]
 @import 'layout';
 @import 'header';
-
-// Background on the theme wrapper!
-div#theme_wrapper{
-    &.dark{
-        background-color: $background1;
-        transition: background-color 200ms;
-    }
-    &.light{
-        background-color: $background3;
-        transition: background-color 200ms;
-    }
-}
 
 // * [ [ Default Styles ] ]
 // Fallbacks in case nothing else applies

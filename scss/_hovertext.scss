@@ -1,0 +1,28 @@
+// * [ [ [ _hovertext.scss ] ] ]
+// This is a file for the hovertext style, and variations
+
+// * [ Basic hovertext! ]
+.hovertext:before{
+    content: attr(data);
+    visibility: hidden;
+    opacity: 0;
+    width: auto;
+    background-color: $background2;
+    border: 2px dotted $main2;
+    color: $white;
+    padding: 4px;
+    transition: opacity 200ms;
+
+    position: absolute;
+    z-index: 101;
+    left: 0;
+    top: 100%;
+}
+.hovertext:hover:before{
+    opacity: 1;
+    visibility: visible;
+}
+.hovertext:active:before, .hovertext.active:before{
+    opacity:0;
+    visibility: hidden;
+}
