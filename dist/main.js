@@ -1446,17 +1446,13 @@ const test_1 = () => {
 }
 
 const test_2 = () => {
-    ;(0,animejs__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        targets: '#block2',
-        rotate: 1080,
-        left: '500px',
-        easing: 'linear',
-        direction: 'alternate',
-        duration: 1000
-    })
+    let el = document.getElementById('modal_wrapper');
+    el.classList.toggle('inactive');
 }
-// Theme swap function!
+// * Theme swap function!
+// First, grab the button so we can work with it
 const theme_button = document.getElementById('theme');
+// Then, if the button isn't currently active, activate it and swap the themes.
 const swap_theme = () => {
     if(theme_button.classList.contains('active') === false){
         activate(theme_button);
@@ -1466,25 +1462,63 @@ const swap_theme = () => {
         pulse(theme_button);
     }
 }
+// Run the animation, and then once it's finished, remove the animate and active classes from the button
 const pulse = (el) =>{
     animate(el);
     (0,animejs__WEBPACK_IMPORTED_MODULE_0__["default"])({
         targets: el,
         scale: 3,
         direction: 'alternate',
-        duration: 400,
         easing: 'easeOutQuad',
+        duration: 500,
         complete: function(anime){
             animate(el);
-            activate(theme_button);
+            activate(el);
         }
     })
 }
 
-// Adds a class that gives an element the "will change: all" attribute, for smoother animations!
+// * Modal functions!
+// First, grab the buttons
+const resume_open_button = document.getElementById("resume_button");
+// Acivate the modal layer
+const activate_modal = () => {
+    let el = document.getElementById('modal_wrapper');
+    let back_el = document.getElementById('modal_background');
+    el.classList.toggle('inactive');
+    
+    (0,animejs__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        targets: el,
+        translateY: "100%",
+        easing: 'easeOutQuad',
+        duration: 500,
+        complete: function(anim){
+            back_el.addEventListener('click', deactivate_modal);
+        }
+    })
+}
+const deactivate_modal = () => {
+    let el = document.getElementById('modal_wrapper');
+    let back_el = document.getElementById('modal_background');
+    animate(el);
+    (0,animejs__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        targets: el,
+        translateY: 0,
+        easing: 'easeOutQuad',
+        duration: 500,
+        complete: function(anim){
+            el.classList.toggle('inactive');
+            animate(el);
+            back_el.removeEventListener('click', deactivate_modal);
+        }
+    })
+}
+
+// Toggles a class that gives an element the "will change: all" attribute, for smoother animations!
 const animate = (el) => {
     el.classList.toggle("animate");
 }
+// Toggles a class for active buttons, so they can't be pressed again mid-activation
 const activate = (el) => {
     el.classList.toggle("active");
 }
@@ -1497,6 +1531,12 @@ document.getElementById('test3').addEventListener('click', swap_theme);
 
 // Function buttons
 theme_button.addEventListener('click', swap_theme);
+resume_open_button.addEventListener('click', activate_modal);
+
+
+
+// A bit of code I found on stackoverflow that makes buttons unfocus after you press them. Handy!
+document.addEventListener('click', function(e) { if(document.activeElement.toString() == '[object HTMLButtonElement]'){ document.activeElement.blur(); } });
 })();
 
 /******/ })()

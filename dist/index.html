@@ -15,6 +15,7 @@
 </head>
 <body>
 <div id="theme_wrapper" class="dark">
+    <!-- Header, including nav menu and borders -->
     <header id="header">
         <div id="logo">
             <a href="https://rtvgilder.com/">
@@ -50,6 +51,27 @@
                     <!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"><polygon class="st0" points="0,25 25,0 50,25 25,50 "/></svg>
                 </button>
+                <button id="resume_button" data="Resume" class="hovertext">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#FFFFFF;}
+                        .st1{fill:#FFFFFF;stroke:#F26769;stroke-width:4;stroke-miterlimit:10;}
+                        .st2{fill:#FFFFFF;stroke:#F26769;stroke-width:2;stroke-miterlimit:10;}
+                    </style>
+                    <rect x="11.2" y="8.3" class="st0" width="27.6" height="33.5"/>
+                    <g>
+                        <polyline class="st1" points="11.2,41.7 11.2,8.3 38.8,8.3 38.8,41.7 	"/>
+                        <line class="st2" x1="16.7" y1="26" x2="33.3" y2="26"/>
+                        <line class="st2" x1="16.7" y1="29.7" x2="33.3" y2="29.7"/>
+                        <line class="st2" x1="16.7" y1="33.3" x2="33.3" y2="33.3"/>
+                        <line class="st2" x1="16.7" y1="37" x2="33.3" y2="37"/>
+                        <path class="st2" d="M17.5,22v-9.1c0,0,10-1.1,6.5,2.8c0,0-2.6,2.8-4,2l5.5,4.2"/>
+                    </g>
+                    </svg>
+                </button>
             </div>
         </div>
         <div id="border_left">
@@ -63,10 +85,12 @@
         </div>
     </header>
 
+    <!-- Splash image in the background, changes based on the page w/ PHP -->
     <div id="splash">
         <img src="./images/mountain.png" alt="A close-up photo of a keyboard" />
     </div>
 
+    <!-- Main page content -->
     <main id="main">
 
         <!-- <div id="front_page_menu">
@@ -142,10 +166,28 @@
         </article>
     </main>
 
+    <!-- Test buttons, remove these before pushing to production, obvs -->
     <div class="test_buttons">
         <button id="test1">TEST 1</button>
         <button id="test2">TEST 2</button>
         <button id="test3">THEME</button>
+    </div>
+
+    <!-- Modals, hidden by default, pop into existence when they are called -->
+    <div id="modal_wrapper" class="inactive">
+        <div id="modal_background"></div>
+        <article class="modal" id="resume_modal">
+            <a href='./resources/resume_2022.pdf' download="RVG_Resume_2020"><img src="./images/resume.png" alt="A pixelated image of a resume, none of the text is legible." /></a>
+            <section class="text">
+                <h1>My Resume</h1>
+                <p>You can download my resume here, in PDF format. I keep it up to date with a list of skills, my recent work history, and my education.</p>
+                <p>If you have any questions about it, feel free to let me know!</p>
+            </section>
+            <section class="buttons">
+                <div id="download_resume" class="button">DOWNLOAD RESUME</div>
+                <div class="button close_modal">CLOSE</div>
+            </section>
+        </article>
     </div>
 
     <script src="./main.js"></script>
